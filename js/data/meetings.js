@@ -43,10 +43,10 @@
         T(318, 'Ava Chen', 'Great. I will send a follow-up with the summary, pilot plan outline and calendar invite. Thanks again.')
       ],
       extract: {
-        summary: 'Acme Corp discovery with Northwind Analytics about replacing Looker plus spreadsheet forecasts. Success means one pipeline source of truth, forecasts within 5% of actuals, and role-based access. Budget about $60k; CFO Morgan Ellis signs over $40k. Pilot planned after CRM admin returns next Wednesday; technical kickoff Thursday Nov 6 at 10am Central.',
+        summary: 'Acme Corp discovery with Northwind Analytics about replacing Looker plus spreadsheet forecasts. Success means one pipeline source of truth, forecasts within five percent of actuals, and role-based access. Budget about sixty thousand; CFO Morgan Ellis signs over forty thousand. Pilot planned after CRM admin returns next Wednesday; technical kickoff Thursday Nov 6 at ten AM Central.',
         decisions: [
           { text: 'Proceed to a two-week sandbox pilot using Northwind CRM data.', cite: { t: 172, quote: 'We would want a two-week pilot on our sandbox with our CRM data.' } },
-          { text: 'Technical kickoff scheduled for Thursday Nov 6 at 10:00 America/Chicago.', cite: { t: 278, quote: 'I will schedule the technical kickoff for Thursday the sixth at ten AM Central.' } }
+          { text: 'Technical kickoff scheduled for Thursday Nov 6 at ten AM Central.', cite: { t: 278, quote: 'I will schedule the technical kickoff for Thursday the sixth at ten AM Central.' } }
         ],
         actions: [
           { text: 'Send pilot plan outline', owner: 'Ava Chen', due: '2026-10-31', cite: { t: 196, quote: 'I can send a pilot plan by Friday.' } },
@@ -65,7 +65,7 @@
         followUp: {
           to: 'jordan.lee@northwind.example, priya.shah@northwind.example',
           subject: 'Northwind discovery follow-up · pilot plan and Nov 6 kickoff',
-          body: 'Hi Jordan and Priya,\n\nThanks for the discovery call today. Capturing what I heard:\n\n• Goal: one source of truth for pipeline; forecasts within 5% of actuals; role-based access.\n• Budget: about $60k this year; Morgan Ellis (CFO) signs over $40k.\n• Next: two-week sandbox pilot once CRM API access is available (admin back next Wednesday).\n• Kickoff: Thursday Nov 6, 10:00 America/Chicago.\n\nI will send the pilot plan outline by Friday and a calendar invite shortly.\n\nBest,\nAva'
+          body: 'Hi Jordan and Priya,\n\nThanks for the discovery call today. Capturing what I heard:\n\n• Goal: one source of truth for pipeline; forecasts within five percent of actuals; role-based access.\n• Budget: about sixty thousand this year; Morgan Ellis (CFO) signs over forty thousand.\n• Next: two-week sandbox pilot once CRM API access is available (admin back next Wednesday).\n• Kickoff: Thursday Nov 6, ten AM Central.\n\nI will send the pilot plan outline by Friday and a calendar invite shortly.\n\nBest,\nAva'
         },
         crm: {
           companyUpsert: { name: 'Northwind Analytics', domain: 'northwind.example' },
@@ -112,7 +112,7 @@
         T(172, 'Sam Ortiz', 'Okay, that is it. Thanks everyone.')
       ],
       extract: {
-        summary: 'Platform standup: auth migration at 80% blocked on Redis failover runbook review; Sev-3 webhook retries recovered; dashboard p95 ~900ms with cache patch due today; beta auth UI toggle targeted for Thursday; legacy JWT kept through Dec 15.',
+        summary: 'Platform standup: auth migration at eighty percent blocked on Redis failover runbook review; Sev-3 webhook retries recovered; dashboard p95 around nine hundred milliseconds with cache patch due today; beta auth UI toggle targeted for Thursday; legacy JWT kept through Dec 15.',
         decisions: [
           { text: 'Keep legacy JWT path through December 15, then remove.', cite: { t: 152, quote: 'Keep it through December fifteenth, then remove.' } }
         ],
@@ -134,7 +134,7 @@
         followUp: {
           to: 'sam.ortiz@acmecorp.example',
           subject: 'Standup notes · Nov 3 Platform team',
-          body: 'Team,\n\nNotes from standup:\n\n• Auth migration 80%; Devon reviews Redis failover runbook before lunch.\n• Sev-3 webhook retries recovered (<1%); write-up due EOD from Devon.\n• Casey ships query cache patch today; auth UI flags PR by tomorrow EOD; beta toggle Thursday.\n• Decision: keep legacy JWT through Dec 15; Sam confirms with product today.\n\n— MeetMinder'
+          body: 'Team,\n\nNotes from standup:\n\n• Auth migration 80%; Devon reviews Redis failover runbook before lunch.\n• Sev-3 webhook retries recovered (back under one percent); write-up due EOD from Devon.\n• Casey ships query cache patch today; auth UI flags PR by tomorrow EOD; beta toggle Thursday.\n• Decision: keep legacy JWT through Dec 15; Sam confirms with product today.\n\n— MeetMinder'
         },
         crm: {
           companyUpsert: null,
@@ -179,7 +179,7 @@
         T(298, 'Maya Torres', 'Fantastic. I will send the renewal redlines and the success plan draft by next Wednesday.')
       ],
       extract: {
-        summary: 'Globex Retail Q3 QBR: WAU up 32% since June; SSO done, SCIM still missing. Expansion to 300 seats tied to SCIM; open ticket GLOB-441 on large inventory exports; holiday readiness plan requested. Conditional yes on 3-year renewal at $120k.',
+        summary: 'Globex Retail Q3 QBR: WAU up thirty-two percent since June; SSO done, SCIM still missing. Expansion to three hundred seats tied to SCIM; open ticket GLOB-441 on large inventory exports; holiday readiness plan requested. Conditional yes on three-year renewal at one hundred twenty thousand.',
         decisions: [
           { text: 'Prioritize SCIM beta targeting early December.', cite: { t: 92, quote: 'Target for a beta would be early December if that helps.' } },
           { text: 'Proceed toward 3-year renewal at $120k if SCIM and export fix land.', cite: { t: 266, quote: 'we are a yes on the three-year renewal at the quoted one hundred twenty thousand.' } }
@@ -199,7 +199,7 @@
         followUp: {
           to: 'chris.patel@globex.example, elena.ruiz@globex.example',
           subject: 'Globex Q3 QBR notes · SCIM, GLOB-441 and renewal',
-          body: 'Hi Chris and Elena,\n\nThanks for a productive QBR. Highlights:\n\n• Adoption: WAU +32% since June; SSO complete.\n• Ask: SCIM beta targeted for early December; seat expansion 200→300 contingent on SCIM.\n• Support: escalating GLOB-441 (export timeouts >50k rows); ETA by Friday.\n• Holiday: readiness checklist draft next week with Elena.\n• Commercial: conditional yes on 3-year renewal at $120k; redlines + success plan by next Wednesday.\n\nBest,\nMaya'
+          body: 'Hi Chris and Elena,\n\nThanks for a productive QBR. Highlights:\n\n• Adoption: WAU up thirty-two percent since June; SSO complete.\n• Ask: SCIM beta targeted for early December; seat expansion two hundred to three hundred contingent on SCIM.\n• Support: escalating GLOB-441 (export timeouts above fifty thousand rows); ETA by Friday.\n• Holiday: readiness checklist draft next week with Elena.\n• Commercial: conditional yes on three-year renewal at one hundred twenty thousand; redlines + success plan by next Wednesday.\n\nBest,\nMaya'
         },
         crm: {
           companyUpsert: { name: 'Globex Retail', domain: 'globex.example' },

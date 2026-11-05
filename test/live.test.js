@@ -35,11 +35,14 @@ describe('live prompt + llm request builders', () => {
       followUp: { to: '', subject: 'Notes', body: 'Hi' },
       crm: { companyUpsert: null, contactsUpsert: [], dealUpsert: null, tasks: [], activity: { type: 'meeting', subject: 'X' } }
     };
-    const fakeFetch = async () => ({
-      ok: true, status: 200,
-      json: async () => ({ choices: [{ message: { content: JSON.stringify(payload) }, finish_reason: 'stop' }], usage: { prompt_tokens: 10, completion_tokens: 20 }, model: 'gpt-test' }),
-      text: async () => ''
-    });
+    const fakeFetch = async () => {
+      const body = { choices: [{ message: { content: JSON.stringify(payload) }, finish_reason: 'stop' }], usage: { prompt_tokens: 10, completion_tokens: 20 }, model: 'gpt-test' };
+      return {
+        ok: true, status: 200,
+        json: async () => body,
+        text: async () => JSON.stringify(body)
+      };
+    };
     const turns = [{ t: 0, speaker: 'A', text: 'we will run a pilot next week' }];
     const r = await live.extractLive({ provider: 'openai', key: 'sk-fake', model: 'gpt-4o-mini' }, turns, { title: 'T' }, { fetch: fakeFetch });
     assert.equal(r.mode, 'live');
