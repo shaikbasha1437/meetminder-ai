@@ -107,7 +107,8 @@
     const cs = m.crmChangeset || { fields: [], summary: 'No changes' };
     const crmPanel = h('div', { class: 'panel' },
       h('h2', { text: 'CRM changeset' }),
-      h('p', { class: 'muted small', text: cs.summary + (m.crmApplied ? ' · Applied to local CRM.' : ' · Approve fields, then apply to the local CRM. HubSpot/Salesforce push needs the self-hosted server.') })
+      h('p', { class: 'muted small', text: cs.summary + (m.crmApplied ? ' · Applied to local CRM.' : ' · Approve fields, then apply to the local CRM. HubSpot/Salesforce push needs the self-hosted server.') }),
+      m.crmApplied ? h('span', { class: 'chip ok', text: 'CRM applied' }) : h('span', { class: 'chip warn', text: 'CRM pending' })
     );
     const approvals = {};
     (cs.fields || []).forEach((f) => { approvals[f.id] = f.approved !== false; });
