@@ -1,0 +1,13 @@
+{
+  "name": "meetminder-ai",
+  "version": "1.0.0",
+  "description": "A meeting agent that turns transcripts into cited notes, action items and CRM updates. Drafts only. Runs in the browser; optional self-hosted server for call joining and CRM push.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/",
+    "server": "node server/index.js",
+    "server:test": "node --test server/test/"
+  },
+  "engines": { "node": ">=18" }
+}

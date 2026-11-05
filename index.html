@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MeetMinder AI · meeting notes, action items and CRM updates</title>
+<meta name="description" content="A meeting agent in your browser: turn live speech, uploads or transcripts into cited notes, action items and CRM updates. Drafts only; joining Zoom/Meet/Teams needs the optional self-hosted server.">
+<meta name="theme-color" content="#5b4fcf" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1220" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<header class="top">
+  <div class="brand"><img src="icons/icon.svg" alt="" width="28" height="28"><span>MeetMinder <b>AI</b></span></div>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#meetings" data-tab="meetings">Meetings</a>
+    <a href="#ingest" data-tab="ingest">Capture</a>
+    <a href="#crm" data-tab="crm">CRM</a>
+    <a href="#server" data-tab="server">Server</a>
+    <a href="#settings" data-tab="settings">Settings</a>
+  </nav>
+  <div class="top-actions">
+    <button type="button" class="mode-chip demo" id="mode-chip" title="Change how notes are written">Demo mode</button>
+    <button type="button" class="icon-btn" id="theme-btn" aria-label="Switch light or dark theme" title="Theme">◐</button>
+    <button type="button" class="icon-btn" id="about-btn" aria-label="About MeetMinder AI" title="About">?</button>
+  </div>
+</header>
+<div class="offline-bar" id="offline-bar" hidden>You're offline. Demo meetings and the local CRM keep working; live AI, transcription APIs and the self-hosted server need a connection.</div>
+<main id="view" tabindex="-1"></main>
+<footer class="foot small muted">Drafts only: MeetMinder never sends email or pushes to HubSpot/Salesforce from the browser. Joining Zoom/Meet/Teams needs the optional self-hosted server. Demo people and companies use .example domains. <a href="https://github.com/shaikbasha1437/meetminder-ai" rel="noopener">Source</a></footer>
+<nav class="bottom-tabs" aria-label="Sections">
+  <a href="#meetings" data-tab="meetings"><span>🗒️</span>Meetings</a>
+  <a href="#ingest" data-tab="ingest"><span>🎙️</span>Capture</a>
+  <a href="#crm" data-tab="crm"><span>📇</span>CRM</a>
+  <a href="#server" data-tab="server"><span>🖥️</span>Server</a>
+  <a href="#settings" data-tab="settings"><span>⚙️</span>Settings</a>
+</nav>
+<div id="modal-root"></div>
+<div id="toast-host" aria-live="polite"></div>
+<noscript><p class="noscript">MeetMinder AI needs JavaScript. Notes and the local CRM run in your browser.</p></noscript>
+<script src="js/agentkit/guard.js"></script>
+<script src="js/agentkit/llm.js"></script>
+<script src="js/agentkit/keystore.js"></script>
+<script src="js/agentkit/modal.js"></script>
+<script src="js/agentkit/webllm.js"></script>
+<script src="js/data/meetings.js"></script>
+<script src="js/meet/parse.js"></script>
+<script src="js/meet/redact.js"></script>
+<script src="js/meet/cite.js"></script>
+<script src="js/meet/quality.js"></script>
+<script src="js/meet/crm.js"></script>
+<script src="js/meet/crmdiff.js"></script>
+<script src="js/meet/adapters.js"></script>
+<script src="js/meet/extract.js"></script>
+<script src="js/meet/live.js"></script>
+<script src="js/meet/store.js"></script>
+<script src="js/meet/agent.js"></script>
+<script src="js/meet/speech.js"></script>
+<script src="js/meet/playback.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script src="js/views/meetings.js"></script>
+<script src="js/views/meeting.js"></script>
+<script src="js/views/ingest.js"></script>
+<script src="js/views/crm.js"></script>
+<script src="js/views/server.js"></script>
+<script src="js/views/settings.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

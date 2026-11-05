@@ -1,0 +1,13 @@
+{
+  "name": "meetminder-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Optional self-hosted companion for MeetMinder AI: transcript webhooks, Recall.ai-style adapter, HubSpot/Salesforce push proxy.",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test test/"
+  },
+  "engines": { "node": ">=18" }
+}
